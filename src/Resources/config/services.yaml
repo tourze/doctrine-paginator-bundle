@@ -1,0 +1,30 @@
+services:
+  # default configuration for services in *this* file
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+  Tourze\DoctrinePaginatorBundle\Service\:
+    resource: '../../Service/'
+
+  # 助手
+  Tourze\DoctrinePaginatorBundle\Helper\PaginationHelper:
+    public: true
+
+  # 分页器（不使用自动装配，需要手动创建）
+  Tourze\DoctrinePaginatorBundle\Paginator\OffsetPaginator:
+    autowire: false
+    public: false
+    shared: false
+  Tourze\DoctrinePaginatorBundle\Paginator\SubQueryPaginator:
+    autowire: false
+    public: false
+    shared: false
+  Tourze\DoctrinePaginatorBundle\Paginator\SearchAfterPaginator:
+    autowire: false
+    public: false
+    shared: false
+  Tourze\DoctrinePaginatorBundle\Paginator\AutoPaginator:
+    autowire: false
+    public: false
+    shared: false
