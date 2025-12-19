@@ -6,7 +6,7 @@ namespace Tourze\DoctrinePaginatorBundle\DependencyInjection;
 
 use Tourze\SymfonyDependencyServiceLoader\AutoExtension;
 
-class DoctrinePaginatorExtension extends AutoExtension
+final class DoctrinePaginatorExtension extends AutoExtension
 {
     protected function getConfigDir(): string
     {
